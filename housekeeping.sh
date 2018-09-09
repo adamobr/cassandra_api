@@ -12,7 +12,7 @@ sudo mkdir -p /data/lib/cassandra/commitlog/
 
 sudo yum install xfsprogs.x86_64 -y
 
-sudo mkfs.xfs ${mount_path}
+sudo mkfs.xfs %mount_path%
 
 sudo mount %mount_path% /data
 
