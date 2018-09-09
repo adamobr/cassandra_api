@@ -6,15 +6,16 @@ sudo rm -fR /var/lib/cassandra/hints/*
 sudo rm -fR /var/lib/cassandra/saved_caches/*
 sudo rm -fR /var/lib/cassandra/commitlog/*
 
-sudo mkdir -p /data/lib/cassandra/hints/
-sudo mkdir -p /data/lib/cassandra/saved_cache/
-sudo mkdir -p /data/lib/cassandra/commitlog/
 
 sudo yum install xfsprogs.x86_64 -y
 
 sudo mkfs.xfs %mount_path
 
 sudo mount %mount_path /data
+
+sudo mkdir -p /data/lib/cassandra/hints/
+sudo mkdir -p /data/lib/cassandra/saved_cache/
+sudo mkdir -p /data/lib/cassandra/commitlog/
 
 sudo chown -R cassandra.cassandra /data
 
